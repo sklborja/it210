@@ -1,5 +1,9 @@
 extends layout
 
 block content
-	.page-header
-		h1 #{title}
+    .page-header
+        h1 #{title}
+
+    div
+        form(action='/login', method='get')
+            input(type='submit', value='Login')
