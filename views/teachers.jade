@@ -1,32 +1,42 @@
 extends layout
 
 block content
-	.page-header
-		h1 #{title}
-	.container
-	.row
-		div.col-md-12
-			table.table.table-striped
-				thead
-					tr
-						th #
-						th Employee ID
-						th Last Name
-						th First Name
-						th Middle Name
-						th Email Address
-						th Unit
-						th Position
-				tbody
-					- var i = 0
-					each key in results   
-						tr
-							td #{i}
-							td !{key.employeeId}
-							td !{key.lastName}
-							td !{key.firstName}
-							td !{key.middleName}
-							td !{key.emailAddress}
-							td !{key.unit}
-							td !{key.position}
-							- i++
+    div
+        nav(class="navbar navbar-inverse", role="navigation", style="padding-left:80px;")
+            ul(class="nav navbar-nav")
+                li
+                    a(href="/") Home
+                li(class="active")
+                    a(href="/teachers") Teachers
+                li
+                    a(href="/logout") Logout
+
+    .page-header
+        h1 #{title}
+    .container
+    .row
+        div.col-md-12
+            table.table.table-striped
+                thead
+                    tr
+                        th #
+                        th Employee ID
+                        th Last Name
+                        th First Name
+                        th Middle Name
+                        th Email Address
+                        th Unit
+                        th Position
+                tbody
+                    - var i = 0
+                    each key in results   
+                        tr
+                            td #{i}
+                            td !{key.employeeId}
+                            td !{key.lastName}
+                            td !{key.firstName}
+                            td !{key.middleName}
+                            td !{key.emailAddress}
+                            td !{key.unit}
+                            td !{key.position}
+                            - i++

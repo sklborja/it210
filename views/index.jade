@@ -1,9 +1,15 @@
 extends layout
 
-block content
+block content            
+    div
+        nav(class="navbar navbar-inverse", role="navigation", style="padding-left:80px;")
+            ul(class="nav navbar-nav")
+                li(class="active")
+                    a(href="/") Home
+                li
+                    a(href="/login") Login
+                    
     .page-header
         h1 #{title}
-
-    div
-        form(action='/login', method='get')
-            input(type='submit', value='Login')
+    .container
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget nisi sed est tempus euismod. Sed eget lacus a leo ornare mattis. Nunc eget metus mauris. Curabitur eu ligula tellus. Sed egestas eget massa id euismod. Etiam luctus justo vel tortor laoreet, vel imperdiet eros facilisis. Vivamus at vestibulum urna. Curabitur vitae fermentum sem, in ultricies risus. Nullam congue nisi eget cursus scelerisque. Cras quis tristique nunc, faucibus tristique velit. Proin dignissim, lectus vel gravida cursus, nisi ante tincidunt sem, in consequat velit nunc quis elit. Donec sed ultricies quam. Sed magna arcu, rutrum eu neque sed, malesuada hendrerit turpis. Sed in massa mollis, volutpat sapien a, mollis turpis. Quisque ultrices metus nisi, efficitur euismod nisi gravida vitae. Sed pellentesque ultricies libero, vel vestibulum nisi mollis ut.
